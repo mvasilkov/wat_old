@@ -1,6 +1,8 @@
 {
     "name": "wat",
     "version": "0.0.1",
+    "description": "Web Site Administration Tool",
+    "keywords": ["git", "wiki"],
     "author": "Mark Vasilkov <mvasilkov@gmail.com>",
     "main": "app",
     "scripts": {

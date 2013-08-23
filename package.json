@@ -2,7 +2,9 @@
     "name": "wat",
     "version": "0.0.1",
     "author": "Mark Vasilkov <mvasilkov@gmail.com>",
+    "main": "app",
     "scripts": {
+        "start": "node app.js",
         "test": "mocha"
     },
     "repository": {

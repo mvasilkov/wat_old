@@ -8,7 +8,7 @@ node_modules: package.json
 	@ $(npm) install
 
 jshint:
-	@ $(jshint) lib/*.js test/*.js
+	@ $(jshint) app.js {lib,test}/*.js
 
 mocha:
 	@ $(mocha) -R spec

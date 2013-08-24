@@ -6,4 +6,9 @@ describe('git', function () {
         this.timeout(500)
         git.usable(done)
     })
+
+    it('should provide isRepo', function () {
+        should.exist(git.isRepo(process.cwd()))
+        should.not.exist(git.isRepo('/usr'))
+    })
 })

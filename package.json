@@ -13,6 +13,9 @@
         "type": "git",
         "url": "git@github.com:mvasilkov/wat.git"
     },
+    "dependencies": {
+        "commander": "2.x"
+    },
     "devDependencies": {
         "jshint": "2.x",
         "mocha": "1.x",

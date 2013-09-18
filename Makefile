@@ -2,13 +2,13 @@ jshint = node_modules/.bin/jshint
 mocha = node_modules/.bin/mocha
 npm = npm
 
-all: node_modules jshint mocha
+all: jshint mocha
 
 node_modules: package.json
 	@ $(npm) install
 
-jshint:
+jshint: node_modules
 	@ $(jshint) app.js {lib,test}/*.js
 
-mocha:
+mocha: node_modules
 	@ $(mocha) -R spec

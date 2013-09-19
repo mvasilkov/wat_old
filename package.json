@@ -15,7 +15,8 @@
         "url": "git@github.com:mvasilkov/wat.git"
     },
     "dependencies": {
-        "commander": "~2.0"
+        "commander": "~2.0",
+        "express": "~3.4"
     },
     "devDependencies": {
         "jshint": "~2.1",

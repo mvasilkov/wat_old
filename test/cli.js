@@ -12,14 +12,14 @@ describe('cli', function () {
     var cwd = process.cwd()
 
     it('should accept -r <dir>', function (done) {
-        cmdEqual('node app.js -r ' + cwd, 'wat: ' + cwd + '\n', done)
+        cmdEqual('node app.js -N -r ' + cwd, 'wat: ' + cwd + '\n', done)
     })
 
     it('should default to current dir', function (done) {
-        cmdEqual('node app.js', 'wat: ' + cwd + '\n', done)
+        cmdEqual('node app.js -N', 'wat: ' + cwd + '\n', done)
     })
 
     it('should test for git repo', function (done) {
-        cmdEqual('node app.js -r node_modules', 'wat: err\n', done)
+        cmdEqual('node app.js -N -r node_modules', 'wat: err\n', done)
     })
 })

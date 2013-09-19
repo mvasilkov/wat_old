@@ -4,6 +4,7 @@
     "description": "Web Site Administration Tool",
     "keywords": ["git", "wiki"],
     "author": "Mark Vasilkov <mvasilkov@gmail.com>",
+    "bin": "bin/wat",
     "main": "app",
     "scripts": {
         "start": "node app.js",

@@ -1,9 +1,9 @@
 var package = require('./package.json'),
-    path = require('path'),
+    path    = require('path'),
     program = require('commander'),
-    git = require('./lib/git')
+    git     = require('./lib/git')
 
-function main() {
+function cli() {
     program
         .option('-r, --repo <dir>', 'git repository to use',
                 path.resolve, process.cwd())
@@ -16,6 +16,8 @@ function main() {
         console.error('wat: err')
 }
 
-if (require.main === module) {
-    git.usable(main)
-}
+function main() { git.usable(cli) }
+
+if (require.main === module) main()
+
+exports.main = main

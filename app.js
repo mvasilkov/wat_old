@@ -4,15 +4,17 @@ var package = require('./package.json'),
     express = require('express'),
     git     = require('./lib/git')
 
-function start() {
+function start(options) {
     var app = express()
-    app.listen(9000)
+    app.listen(options.port)
 }
 
 function cli() {
     program
         .option('-r, --repo <dir>', 'git repository to use',
                 path.resolve, process.cwd())
+        .option('-p, --port <num>', 'port to listen on',
+                parseInt, 9000)
         .option('-N, --nop', 'do nothing')
         .version(package.version)
         .parse(process.argv)
@@ -23,7 +25,7 @@ function cli() {
     else
         console.error('wat: err'), process.exit()
 
-    program.nop || start()
+    program.nop || start(program)
 }
 
 function main() { git.usable(cli) }

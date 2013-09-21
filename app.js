@@ -6,6 +6,9 @@ var package = require('./package.json'),
 
 function start(options) {
     var app = express()
+
+    if (options.nop) return app
+
     app.listen(options.port)
 }
 
@@ -25,11 +28,11 @@ function cli() {
     else
         console.error('wat: err'), process.exit()
 
-    program.nop || start(program)
+    start(program)
 }
 
 function main() { git.usable(cli) }
 
 if (require.main === module) main()
 
-exports.main = main
+module.exports.start = start

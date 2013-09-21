@@ -20,6 +20,6 @@ describe('cli', function () {
     })
 
     it('should test for git repo', function (done) {
-        cmdEqual('node app.js -N -r node_modules', 'wat: err\n', done)
+        cmdEqual('node app.js -r node_modules', 'wat: err\n', done)
     })
 })

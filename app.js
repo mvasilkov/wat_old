@@ -2,10 +2,12 @@ var package = require('./package.json'),
     path    = require('path'),
     program = require('commander'),
     express = require('express'),
-    git     = require('./lib/git')
+    git     = require('./lib/git'),
+    util    = require('./lib/util')
 
 function start(options) {
-    var app = express()
+    var app = express(),
+        finder = util.finder(options.repo, __dirname)
 
     if (options.nop) return app
 

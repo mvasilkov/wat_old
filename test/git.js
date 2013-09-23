@@ -1,5 +1,7 @@
-var should = require('should'),
+var assert = require('assert'),
     git = require('../lib/git')
+
+function reject(a) { if (a) assert.fail(a, 'nil', '', '->') }
 
 describe('git', function () {
     it('should be usable', function (done) {
@@ -8,7 +10,8 @@ describe('git', function () {
     })
 
     it('should provide isRepo', function () {
-        should.exist(git.isRepo(process.cwd()))
-        should.not.exist(git.isRepo('/usr'))
+        assert(git.isRepo(process.cwd()))
+        reject(git.isRepo('/bin'))
+        reject(git.isRepo('/shrubbery'))
     })
 })

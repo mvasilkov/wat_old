@@ -1,9 +1,9 @@
-var should = require('should'),
+var assert = require('assert'),
     child_process = require('child_process')
 
 function cmdEqual(cmd, res, done) {
     child_process.exec(cmd, function (err, stdout, stderr) {
-        (stdout || stderr).should.equal(res)
+        assert.equal(stdout || stderr, res)
         done(err)
     })
 }

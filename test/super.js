@@ -6,7 +6,7 @@ describe('app', function () {
 
     it('should have a start page', function (done) {
         request(app)
-            .get()
+            .get('')
             .expect('content-type', 'text/html')
             .expect(200, done)
     })

@@ -10,4 +10,11 @@ describe('app', function () {
             .expect('content-type', 'text/html')
             .expect(200, done)
     })
+
+    it('should have robots.txt', function (done) {
+        request(app)
+            .get('/robots.txt')
+            .expect('content-type', 'text/plain')
+            .expect(200, done)
+    })
 })

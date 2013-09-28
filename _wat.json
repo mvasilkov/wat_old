@@ -3,6 +3,10 @@
         "": {
             "type": "html",
             "payload": "start.html"
+        },
+        "robots.txt": {
+            "type": "txt",
+            "payload": "robots.txt"
         }
     }
 }

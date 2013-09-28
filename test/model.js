@@ -1,9 +1,9 @@
 var assert = require('assert'),
-    ms = require('../lib/ms')
+    model = require('../lib/model')
 
-describe('ms', function () {
+describe('model', function () {
     it('should provide defaults', function () {
-        var start = ms.get('')
+        var start = model.get('')
         assert(start)
         assert.equal(start.type, 'html')
     })

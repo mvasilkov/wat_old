@@ -24,7 +24,7 @@ describe('util', function () {
             assert.equal(f('wat'), dir + '/bin/wat')
             assert.equal(f('git.js'), dir + '/lib/git.js')
             assert.equal(f('cli.js'), dir + '/test/cli.js')
-            reject(f('app.js'))
+            reject(f('package.json'))
             reject(f('autoexec.bat'))
         })
     })

@@ -1,12 +1,10 @@
 {
     "pages": {
         "": {
-            "type": "html",
-            "payload": "start.html"
+            "read": "start.html"
         },
         "robots.txt": {
-            "type": "txt",
-            "payload": "robots.txt"
+            "read": "robots.txt"
         }
     }
 }

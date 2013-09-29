@@ -8,8 +8,7 @@ var package = require('./package.json'),
 
 function start(options) {
     var app = express(),
-        p = '/pages',
-        finder = util.finder(options.repo + p, __dirname + p)
+        finder = util.finder(options.repo, __dirname)
 
     app.use(render.pages(finder))
 

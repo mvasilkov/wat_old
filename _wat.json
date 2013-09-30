@@ -1,7 +1,8 @@
 {
     "pages": {
         "": {
-            "read": "start.html"
+            "read": "start.html",
+            "wrap": "base.html"
         },
         "robots.txt": {
             "read": "robots.txt"

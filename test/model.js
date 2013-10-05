@@ -5,11 +5,11 @@ var assert = require('assert'),
 describe('model', function () {
     it('should provide defaults', function () {
         var p = model.get('')
-        assert(p && p.read)
-        assert.equal(mediatype.lookup(p.read), 'text/html')
+        assert(p && p.r)
+        assert.equal(mediatype.lookup(p.rt || p.r), 'text/html')
 
         p = model.get('robots.txt')
-        assert(p && p.read)
-        assert.equal(mediatype.lookup(p.read), 'text/plain')
+        assert(p && p.r)
+        assert.equal(mediatype.lookup(p.rt || p.r), 'text/plain')
     })
 })

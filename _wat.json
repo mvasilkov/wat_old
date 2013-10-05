@@ -1,11 +1,11 @@
 {
     "pages": {
         "": {
-            "read": "start.html",
-            "wrap": "base.html"
+            "r": "start.html",
+            "rt": "base.html"
         },
         "robots.txt": {
-            "read": "robots.txt"
+            "r": "robots.txt"
         }
     }
 }

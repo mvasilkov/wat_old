@@ -17,6 +17,7 @@
     "dependencies": {
         "commander": "~2.0",
         "express": "~3.4",
+        "iosys": "~0.0",
         "mediatype": "~0.0",
         "rssi": "~0.0"
     },

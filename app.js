@@ -2,13 +2,13 @@ var package = require('./package.json'),
     path    = require('path'),
     program = require('commander'),
     express = require('express'),
+    iosys   = require('iosys'),
     render  = require('./lib/render'),
-    git     = require('./lib/git'),
-    util    = require('./lib/util')
+    git     = require('./lib/git')
 
 function start(options) {
     var app = express(),
-        finder = util.finder(options.repo, __dirname)
+        finder = iosys.finder(options.repo, __dirname)
 
     app.use(render.pages(finder))
 

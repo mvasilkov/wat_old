@@ -10,6 +10,7 @@ function start(options) {
     var app = express(),
         finder = iosys.finder(options.repo, __dirname)
 
+    app.disable('x-powered-by')
     app.use(render.pages(finder))
 
     if (options.nop) return app

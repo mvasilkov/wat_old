@@ -18,4 +18,18 @@ describe('model', function () {
         assert(p && p.r)
         assert.equal(mediatype.lookup(p.rt || p.r), 'text/plain')
     })
+
+    it('should resolve defaults', function () {
+        var f = iosys.finder(__dirname + '/a', __dirname + '/b')
+        model.init(f)
+
+        var p = model.get('p1')
+        assert.equal(p.r, 'p1a.txt')
+
+        p = model.get('p2')
+        assert.equal(p.r, 'p2a.txt')
+
+        p = model.get('p3')
+        assert.equal(p.r, 'p3b.txt')
+    })
 })

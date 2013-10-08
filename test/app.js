@@ -15,6 +15,13 @@ describe('app', function () {
             .expect(200, done)
     })
 
+    it('should have favicon.ico', function (done) {
+        req
+            .get('/favicon.ico')
+            .expect('content-type', 'image/x-icon')
+            .expect(200, done)
+    })
+
     it('should have robots.txt', function (done) {
         req
             .get('/robots.txt')

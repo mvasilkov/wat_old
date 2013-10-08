@@ -3,6 +3,7 @@ var package = require('./package.json'),
     program = require('commander'),
     express = require('express'),
     iosys   = require('iosys'),
+    aux     = require('./lib/aux'),
     render  = require('./lib/render'),
     git     = require('./lib/git')
 
@@ -11,10 +12,7 @@ function start(options) {
         finder = iosys.finder(options.repo, __dirname)
 
     app.disable('x-powered-by')
-    app.use(express.favicon(finder('files/favicon.ico')))
-    app.use('/robots.txt', function (req, res) {
-        res.sendfile(finder('files/robots.txt'))
-    })
+    app.use(aux(finder))
     app.use(render.pages(finder))
 
     if (options.nop) return app

@@ -15,6 +15,10 @@ function start(options) {
     app.use(aux(finder))
     app.use(render.pages(finder))
 
+    var pub = '/files'
+    app.use(pub, express.static(options.repo + pub))
+    app.use(pub, express.static(__dirname + pub))
+
     if (options.nop) return app
 
     app.listen(options.port)

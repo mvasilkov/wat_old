@@ -1,0 +1,13 @@
+body {
+    background: #fbfbfb;
+    color: #242424;
+    font: 15px/20px Consolas, Monaco, monospace;
+    margin: 0;
+}
+
+p { margin: 0 0 10px; }
+
+#text {
+    margin: 25px auto;
+    max-width: 48em;
+}

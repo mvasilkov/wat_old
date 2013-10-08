@@ -3,9 +3,6 @@
         "": {
             "r": "start.html",
             "rt": "base.html"
-        },
-        "robots.txt": {
-            "r": "robots.txt"
         }
     }
 }

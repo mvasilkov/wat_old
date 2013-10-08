@@ -13,10 +13,6 @@ describe('model', function () {
         var p = model.get('')
         assert(p && p.r)
         assert.equal(mediatype.lookup(p.rt || p.r), 'text/html')
-
-        p = model.get('robots.txt')
-        assert(p && p.r)
-        assert.equal(mediatype.lookup(p.rt || p.r), 'text/plain')
     })
 
     it('should resolve defaults', function () {

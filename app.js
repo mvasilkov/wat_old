@@ -11,6 +11,10 @@ function start(options) {
         finder = iosys.finder(options.repo, __dirname)
 
     app.disable('x-powered-by')
+    app.use(express.favicon(finder('files/favicon.ico')))
+    app.use('/robots.txt', function (req, res) {
+        res.sendfile(finder('files/robots.txt'))
+    })
     app.use(render.pages(finder))
 
     if (options.nop) return app

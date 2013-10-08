@@ -19,6 +19,7 @@ describe('app', function () {
         req
             .get('/favicon.ico')
             .expect('content-type', 'image/x-icon')
+            .expect('cache-control', 'public, max-age=9000000')
             .expect(200, done)
     })
 
@@ -26,6 +27,7 @@ describe('app', function () {
         req
             .get('/robots.txt')
             .expect('content-type', 'text/plain')
+            .expect('cache-control', 'public, max-age=9000000')
             .expect(200, done)
     })
 

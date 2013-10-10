@@ -19,6 +19,7 @@ describe('app', function () {
         req
             .get('/favicon.ico')
             .expect('content-type', 'image/x-icon')
+            .expect('content-length', '1150')
             .expect('cache-control', 'public, max-age=9000000')
             .expect(200, done)
     })
@@ -27,6 +28,7 @@ describe('app', function () {
         req
             .get('/robots.txt')
             .expect('content-type', 'text/plain')
+            .expect('content-length', '24')
             .expect('cache-control', 'public, max-age=9000000')
             .expect(200, done)
     })
@@ -38,5 +40,12 @@ describe('app', function () {
                 eq(res.get('x-powered-by'))
                 done(err)
             })
+    })
+
+    it('should set Content-Length header', function (done) {
+        req
+            .get('')
+            .expect('content-length', '257')
+            .expect(200, done)
     })
 })

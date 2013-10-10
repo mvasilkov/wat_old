@@ -48,4 +48,11 @@ describe('app', function () {
             .expect('content-length', '257')
             .expect(200, done)
     })
+
+    it('should set Content-Length header-2', function (done) {
+        req
+            .get('/license.txt')
+            .expect('content-length', '1111')
+            .expect(200, done)
+    })
 })

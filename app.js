@@ -27,11 +27,11 @@ function start(options) {
 
 function cli() {
     program
-        .option('-r, --repo <dir>', 'git repository to use',
+        .option('-r, --repo <dir>', 'git repository to use (default .)',
                 path.resolve, process.cwd())
-        .option('-p, --port <num>', 'port to listen on',
+        .option('-p, --port <num>', 'port to listen on (default 9000)',
                 parseInt, 9000)
-        .option('-b, --bind <ip>', 'IP address to bind to',
+        .option('-b, --bind <ip>', 'IP address to bind to (default 0.0.0.0)',
                 '0.0.0.0')
         .option('-N, --nop', 'do nothing')
         .version(package.version)

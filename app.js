@@ -12,8 +12,9 @@ function start(options) {
         finder = iosys.finder(options.repo, __dirname)
 
     app.disable('x-powered-by')
+    app.use(express.logger('dev'))
     app.use(aux(finder))
-    app.use(render.pages(finder))
+    app.use(render(finder))
 
     var pub = '/files'
     app.use(pub, express.static(options.repo + pub))

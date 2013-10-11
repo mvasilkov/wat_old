@@ -8,13 +8,6 @@ describe('app', function () {
     var app = start({nop: true}),
         req = request(app)
 
-    it('should have a start page', function (done) {
-        req
-            .get('')
-            .expect('content-type', 'text/html')
-            .expect(200, done)
-    })
-
     it('should have favicon.ico', function (done) {
         req
             .get('/favicon.ico')
@@ -45,6 +38,7 @@ describe('app', function () {
     it('should set Content-Length header', function (done) {
         req
             .get('')
+            .expect('content-type', 'text/html')
             .expect('content-length', '257')
             .expect(200, done)
     })

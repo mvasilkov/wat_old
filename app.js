@@ -22,7 +22,7 @@ function start(options) {
 
     if (options.nop) return app
 
-    app.listen(options.port)
+    app.listen(options.port, options.bind)
 }
 
 function cli() {
@@ -31,6 +31,8 @@ function cli() {
                 path.resolve, process.cwd())
         .option('-p, --port <num>', 'port to listen on',
                 parseInt, 9000)
+        .option('-b, --bind <ip>', 'IP address to bind to',
+                '0.0.0.0')
         .option('-N, --nop', 'do nothing')
         .version(package.version)
         .parse(process.argv)

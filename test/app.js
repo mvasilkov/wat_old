@@ -50,4 +50,11 @@ describe('app', function () {
             .expect('content-length', '1111')
             .expect(200, done)
     })
+
+    it('should redirect index.html', function (done) {
+        req
+            .get('/index.html')
+            .expect('location', '/')
+            .expect(301, done)
+    })
 })

@@ -4,6 +4,9 @@
             "r": "start.html",
             "rt": "base.html"
         },
+        "index.html": {
+            "redir": "/"
+        },
         "license.txt": {
             "r": "license.txt"
         }

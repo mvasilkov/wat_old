@@ -1,11 +1,15 @@
 {
     "pages": {
         "": {
-            "r": "start.html",
-            "rt": "base.html"
+            "r": "base.html",
+            "b": {
+                "page": {
+                    "r": "start.html"
+                }
+            }
         },
         "index.html": {
-            "redir": "/"
+            "redir": ""
         },
         "license.txt": {
             "r": "license.txt"

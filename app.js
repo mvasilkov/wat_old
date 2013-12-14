@@ -16,7 +16,7 @@ function start(options) {
     app.use(aux(finder))
     app.use(render(finder))
 
-    var pub = '/files'
+    var pub = '/pub'
     app.use(pub, express.static(options.repo + pub))
     app.use(pub, express.static(__dirname + pub))
 

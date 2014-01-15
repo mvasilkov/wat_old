@@ -16,16 +16,16 @@
     },
     "dependencies": {
         "buffer-crc32": "~0.2",
-        "commander": "~2.0",
+        "commander": "~2.1",
         "express": "~3.4",
         "iosys": "~0.0",
-        "lodash": "~2.2",
+        "lodash": "~2.4",
         "mediatype": "~0.0",
         "rssi": "~0.0"
     },
     "devDependencies": {
-        "jshint": "~2.1",
-        "mocha": "~1.13",
+        "jshint": "~2.4",
+        "mocha": "~1.17",
         "supertest": "~0.8"
     },
     "license": "MIT"

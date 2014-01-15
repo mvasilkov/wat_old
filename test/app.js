@@ -39,7 +39,7 @@ describe('app', function () {
         req
             .get('')
             .expect('content-type', 'text/html')
-            .expect('content-length', '257')
+            .expect('content-length', '256')
             .expect(200, done)
     })
 

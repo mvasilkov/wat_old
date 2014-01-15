@@ -37,7 +37,7 @@ function cli() {
         .version(package.version)
         .parse(process.argv)
 
-    /* jshint expr: true */
+    /* jshint -W030 */
     if (git.isRepo(program.repo))
         console.log('wat:', program.repo)
     else

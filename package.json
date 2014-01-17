@@ -2,7 +2,7 @@
     "name": "wat",
     "version": "0.0.4",
     "description": "Web Site Administration Tool",
-    "keywords": ["git", "wiki", "cms"],
+    "keywords": ["wiki", "cms"],
     "author": "Mark Vasilkov <mvasilkov@gmail.com>",
     "bin": "bin/wat",
     "main": "app",

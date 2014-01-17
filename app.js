@@ -4,8 +4,7 @@ var package = require('./package.json'),
     express = require('express'),
     iosys   = require('iosys'),
     aux     = require('./lib/aux'),
-    render  = require('./lib/render'),
-    git     = require('./lib/git')
+    render  = require('./lib/render')
 
 function start(options) {
     var app = express(),
@@ -38,7 +37,7 @@ function cli() {
         .parse(process.argv)
 
     /* jshint -W030 */
-    if (git.isRepo(program.repo))
+    if (iosys.is.dir(program.repo))
         console.log('wat:', program.repo)
     else
         console.error('wat: err'), process.exit()
@@ -46,9 +45,6 @@ function cli() {
     start(program)
 }
 
-function main() { git.usable(cli) }
+if (require.main === module) cli()
 
-if (require.main === module) main()
-
-module.exports.main = main
 module.exports.start = start

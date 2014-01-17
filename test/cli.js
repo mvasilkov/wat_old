@@ -18,8 +18,4 @@ describe('cli', function () {
     it('should default to current dir', function (done) {
         cmdEqual('node app.js -N', 'wat: ' + cwd + '\n', done)
     })
-
-    it('should test for git repo', function (done) {
-        cmdEqual('node app.js -r node_modules', 'wat: err\n', done)
-    })
 })

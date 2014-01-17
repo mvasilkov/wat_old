@@ -8,7 +8,7 @@ var package = require('./package.json'),
 
 function start(options) {
     var app = express(),
-        finder = iosys.finder(options.repo, __dirname)
+        finder = iosys.finder(options.root, __dirname)
 
     app.disable('x-powered-by')
     app.use(express.logger('dev'))
@@ -16,7 +16,7 @@ function start(options) {
     app.use(render(finder))
 
     var pub = '/pub'
-    app.use(pub, express.static(options.repo + pub))
+    app.use(pub, express.static(options.root + pub))
     app.use(pub, express.static(__dirname + pub))
 
     if (options.nop) return app
@@ -26,7 +26,7 @@ function start(options) {
 
 function cli() {
     program
-        .option('-r, --repo <dir>', 'git repository to use (default .)',
+        .option('-r, --root <dir>', 'root directory to use (default .)',
                 path.resolve, process.cwd())
         .option('-p, --port <num>', 'port to listen on (default 9000)',
                 parseInt, 9000)
@@ -37,8 +37,8 @@ function cli() {
         .parse(process.argv)
 
     /* jshint -W030 */
-    if (iosys.is.dir(program.repo))
-        console.log('wat:', program.repo)
+    if (iosys.is.dir(program.root))
+        console.log('wat:', program.root)
     else
         console.error('wat: err'), process.exit()
 

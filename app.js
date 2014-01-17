@@ -47,4 +47,5 @@ function cli() {
 
 if (require.main === module) cli()
 
+module.exports.cli = cli
 module.exports.start = start

@@ -37,7 +37,7 @@ function cli() {
         .parse(process.argv)
 
     /* jshint -W030 */
-    if (iosys.is.dir(program.root))
+    if (iosys.path.isDir(program.root))
         console.log('wat:', program.root)
     else
         console.error('wat: err'), process.exit()

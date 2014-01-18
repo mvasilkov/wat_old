@@ -1,8 +1,8 @@
 var assert = require('assert'),
-    child_process = require('child_process')
+    childProcess = require('child_process')
 
 function cmdEqual(cmd, res, done) {
-    child_process.exec(cmd, function (err, stdout, stderr) {
+    childProcess.exec(cmd, function (err, stdout, stderr) {
         assert.equal(stdout || stderr, res)
         done(err)
     })

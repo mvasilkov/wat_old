@@ -1,6 +1,6 @@
 {
     "name": "wat",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "Web Site Administration Tool",
     "keywords": ["wiki", "cms"],
     "author": "Mark Vasilkov <mvasilkov@gmail.com>",

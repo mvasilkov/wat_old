@@ -1,13 +1,22 @@
-body {
-    background: #fbfbfb;
-    color: #242424;
-    font: 15px/20px Consolas, Monaco, monospace;
-    margin: 0;
-}
+@import url(//fonts.googleapis.com/css?family=Open+Sans);
 
-p { margin: 0 0 10px; }
+body {
+    background: #f3f6f8;
+    color: #363b3f;
+    font: 15px/24px Open Sans, sans-serif;
+    margin: 0;
+    text-rendering: optimizeLegibility;
+}
 
 #b_page {
     margin: 25px auto;
     max-width: 48em;
+}
+
+#b_page p {
+    background: #fbfbfb;
+    border: 3px solid #e9edf1;
+    float: left;
+    margin: 20px 0;
+    padding: 10px 15px;
 }
